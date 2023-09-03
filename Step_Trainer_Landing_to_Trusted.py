@@ -53,27 +53,9 @@ Join_node1693733484444 = Join.apply(
     transformation_ctx="Join_node1693733484444",
 )
 
-# Script generated for node Drop Fields
-DropFields_node1693733511207 = DropFields.apply(
-    frame=Join_node1693733484444,
-    paths=[
-        "cust_serialnumber",
-        "cust_sharewithpublicasofdate",
-        "cust_birthday",
-        "cust_registrationdate",
-        "cust_sharewithresearchasofdate",
-        "cust_customername",
-        "cust_email",
-        "cust_lastupdatedate",
-        "cust_phone",
-        "cust_sharewithfriendsasofdate",
-    ],
-    transformation_ctx="DropFields_node1693733511207",
-)
-
 # Script generated for node Step Trainer Landing to Trusted
 StepTrainerLandingtoTrusted_node3 = glueContext.write_dynamic_frame.from_options(
-    frame=DropFields_node1693733511207,
+    frame=Join_node1693733484444,
     connection_type="s3",
     format="json",
     connection_options={
