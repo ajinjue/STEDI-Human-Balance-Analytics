@@ -52,6 +52,10 @@ To simulate the data coming from the various sources (data lake), I created an S
 
 ![image](https://github.com/ajinjue/STEDI-Human-Balance-Analytics/assets/100845693/5275d54b-2db6-490e-8f0e-37b6f0ad61c0)
 
+The resulting customer trusted data has no rows where shareWithResearchAsOfDate is blank. This is shown below:
+
+![image](https://github.com/ajinjue/STEDI-Human-Balance-Analytics/assets/100845693/2b770532-29dd-496a-a10a-d8f90d58cd5e)
+
 **customer_landing.sql:** It's the equivalent SQL code to create the customer_landing table from within AWS Athena Query Editor. <br/>
 **accelerometer_landing.sql:** It's the equivalent SQL code to create the accelerometer_landing table from within AWS Athena Query Editor. <br/>
 **Accelerometer_Landing_to_Trusted.py:** It's the python script for the Glue job to sanitize the Accelerometer data in the Landing zone. That's this job stores only Accelerometer Readings from customers who agreed to share their data for research purposes in the Trusted zone. <br/>
