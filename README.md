@@ -48,7 +48,7 @@ To simulate the data coming from the various sources (data lake), I created an S
 
 **Customer_Landing_to_Trusted.py:** It's the python script for the Glue job to sanitize the Customer data in the Landing zone. That's this job filters only Customer Records who agreed to share their data for research purposes and stores the resulting data the Trusted zone; from which the customer_trusted table is created.
 
-**customer_trusted.png:** It contains the result for querying the entire customer_landing table using AWS Athena Query Editor. Its content is showed below:
+**customer_trusted.png:** It contains the result for querying the entire customer_trusted table using AWS Athena Query Editor. Its content is showed below:
 
 ![image](https://github.com/ajinjue/STEDI-Human-Balance-Analytics/assets/100845693/5275d54b-2db6-490e-8f0e-37b6f0ad61c0)
 
