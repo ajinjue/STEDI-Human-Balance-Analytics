@@ -42,3 +42,8 @@ To simulate the data coming from the various sources (data lake), I created an S
 
 ![image](https://github.com/ajinjue/STEDI-Human-Balance-Analytics/assets/100845693/09060de9-9200-4dbe-8f79-605d94cf71a3)
 
+**accelerometer_landing.png:**It contains the result for querying the entire accelerometer_landing table using AWS Athena Query Editor. Its content is showed below:
+
+![image](https://github.com/ajinjue/STEDI-Human-Balance-Analytics/assets/100845693/891b7c77-0082-47c4-bdc6-f25b28eacaca)
+
+
