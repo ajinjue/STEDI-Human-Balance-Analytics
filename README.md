@@ -17,6 +17,9 @@ To develop a data lakehouse solution in the AWS cloud that curates the data for 
 - AWS Athena
 - AWS S3
 
+## Data Lakehouse Architecture
+![image](https://github.com/ajinjue/STEDI-Human-Balance-Analytics/assets/100845693/9a1e81ea-1f07-4f69-b51f-82cd1066e29c)
+
 ## Project Data
 STEDI has three JSON data sources to use from the Step Trainer. 
 - customer
