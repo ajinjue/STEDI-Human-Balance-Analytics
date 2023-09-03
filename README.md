@@ -54,6 +54,9 @@ To simulate the data coming from the various sources (data lake), I created an S
 
 **customer_landing.sql:** It's the equivalent SQL code to create the customer_landing table from within AWS Athena Query Editor.
 **accelerometer_landing.sql:** It's the equivalent SQL code to create the accelerometer_landing table from within AWS Athena Query Editor.
+**Accelerometer_Landing_to_Trusted.py:** It's the python script for the Glue job to sanitize the Accelerometer data in the Landing zone. That's this job stores only Accelerometer Readings from customers who agreed to share their data for research purposes in the Trusted zone.
+**Customer_Trusted_to_Curated.py:** It's the python script for the Glue job that takes Customer data from the Trusted zone to the Curated zone after joining it with the Accelerometer data.
+
 
 
 
