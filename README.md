@@ -27,7 +27,6 @@ Check out the JSON data in the following folders in the Github repo linked: <br/
 https://github.com/udacity/nd027-Data-Engineering-Data-Lakes-AWS-Exercises/tree/main/project/starter
 
 The datasets have the following fields: <br/>
-
 **customer:** serialnumber, sharewithpublicasofdate, birthday, registrationdate, sharewithresearchasofdate, customername, email, lastupdatedate, phone, sharewithfriendsasofdate <br/>
 **step_trainer:** sensorReadingTime, serialNumber, distanceFromObject <br/>
 **accelerometer:** timeStamp, user, x, y, z
