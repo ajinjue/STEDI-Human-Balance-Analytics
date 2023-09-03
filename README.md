@@ -9,3 +9,10 @@ The STEDI Team has been hard at work developing a hardware STEDI Step Trainer th
 
 STEDI has heard from millions of early adopters who are willing to purchase the STEDI Step Trainers and use them.
 Several customers have already received their Step Trainers, installed the mobile application, and begun using them together to test their balance. The Step Trainer is just a motion sensor that records the distance of the object detected. The app uses a mobile phone accelerometer to detect motion in the X, Y, and Z directions.
+
+## Project Environment
+To develop a data lakehouse solution in the AWS cloud that curates the data for the machine learning model, we use the following tools and services:
+- Python and Spark
+- AWS Glue
+- AWS Athena
+- AWS S3
