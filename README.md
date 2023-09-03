@@ -16,3 +16,7 @@ To develop a data lakehouse solution in the AWS cloud that curates the data for 
 - AWS Glue
 - AWS Athena
 - AWS S3
+
+## Project Data
+STEDI has three JSON data sources to use from the Step Trainer. Check out the JSON data in the following folders in the Github repo linked below:
+https://github.com/udacity/nd027-Data-Engineering-Data-Lakes-AWS-Exercises/tree/main/project/starter
