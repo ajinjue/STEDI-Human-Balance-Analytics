@@ -35,7 +35,7 @@ The datasets have the following fields: <br/>
 **accelerometer:** timeStamp, user, x, y, z
 
 ## Requirements
-To simulate the data coming from the various sources (data lake), I created an S3 bucket, 3 directories in the bucket, and copied the datasets in them. I AWS Glue's Data Catalog to create Glue tables as customer_landing, step_trainer_landing, and accelerometer_landing zones.
+To simulate the data coming from the various sources (data lake), I created an S3 bucket, 3 directories in the bucket, and copied the datasets in them. I used AWS Glue's Data Catalog to create Glue tables as customer_landing, step_trainer_landing, and accelerometer_landing zones.
 
 ## Program Files
 **customer_landing.png:** It contains the result for querying the entire customer_landing table using AWS Athena Query Editor. Its content is showed below:
