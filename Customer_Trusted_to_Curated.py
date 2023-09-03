@@ -26,25 +26,18 @@ CustomerTrusted_node1 = glueContext.create_dynamic_frame.from_catalog(
     transformation_ctx="CustomerTrusted_node1",
 )
 
-# Script generated for node Join
-Join_node1693730888490 = Join.apply(
+# Script generated for node Join (AccT_CusT)
+JoinAccT_CusT_node1693730888490 = Join.apply(
     frame1=CustomerTrusted_node1,
     frame2=AccelerometerTrusted_node1693730830466,
     keys1=["email"],
     keys2=["user"],
-    transformation_ctx="Join_node1693730888490",
-)
-
-# Script generated for node Drop Fields
-DropFields_node1693730911817 = DropFields.apply(
-    frame=Join_node1693730888490,
-    paths=["timestamp", "user", "x", "y", "z"],
-    transformation_ctx="DropFields_node1693730911817",
+    transformation_ctx="JoinAccT_CusT_node1693730888490",
 )
 
 # Script generated for node Customers Curated
 CustomersCurated_node3 = glueContext.write_dynamic_frame.from_options(
-    frame=DropFields_node1693730911817,
+    frame=JoinAccT_CusT_node1693730888490,
     connection_type="s3",
     format="json",
     connection_options={
