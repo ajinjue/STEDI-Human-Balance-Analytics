@@ -52,6 +52,9 @@ To simulate the data coming from the various sources (data lake), I created an S
 
 ![image](https://github.com/ajinjue/STEDI-Human-Balance-Analytics/assets/100845693/5275d54b-2db6-490e-8f0e-37b6f0ad61c0)
 
+**customer_landing.sql:** It's the equivalent SQL code to create the customer_landing table from within AWS Athena Query Editor.
+**accelerometer_landing.sql:** It's the equivalent SQL code to create the accelerometer_landing table from within AWS Athena Query Editor.
+
 
 
 
