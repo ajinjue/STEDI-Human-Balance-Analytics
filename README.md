@@ -21,6 +21,6 @@ To develop a data lakehouse solution in the AWS cloud that curates the data for 
 STEDI has three JSON data sources to use from the Step Trainer. 
 - customer
 - step_trainer
-- accelerometer
-Check out the JSON data in the following folders in the Github repo linked:
+- accelerometer <br/>
+Check out the JSON data in the following folders in the Github repo linked: <br/>
 https://github.com/udacity/nd027-Data-Engineering-Data-Lakes-AWS-Exercises/tree/main/project/starter
