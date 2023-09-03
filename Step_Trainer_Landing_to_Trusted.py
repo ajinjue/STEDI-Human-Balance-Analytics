@@ -26,8 +26,15 @@ StepTrainerLanding_node1 = glueContext.create_dynamic_frame.from_catalog(
     transformation_ctx="StepTrainerLanding_node1",
 )
 
-# Script generated for node Renamed keys for Join
-RenamedkeysforJoin_node1693733605794 = ApplyMapping.apply(
+# Script generated for node Accelerometer Trusted
+AccelerometerTrusted_node1693742704153 = glueContext.create_dynamic_frame.from_catalog(
+    database="stedi_analytics",
+    table_name="accelerometer_trusted",
+    transformation_ctx="AccelerometerTrusted_node1693742704153",
+)
+
+# Script generated for node Renamed keys for Join2
+RenamedkeysforJoin2_node1693743314449 = ApplyMapping.apply(
     frame=CustomersCurated_node1693733331952,
     mappings=[
         ("serialnumber", "string", "cust_serialnumber", "string"),
@@ -41,28 +48,37 @@ RenamedkeysforJoin_node1693733605794 = ApplyMapping.apply(
         ("phone", "string", "cust_phone", "string"),
         ("sharewithfriendsasofdate", "long", "cust_sharewithfriendsasofdate", "long"),
     ],
-    transformation_ctx="RenamedkeysforJoin_node1693733605794",
+    transformation_ctx="RenamedkeysforJoin2_node1693743314449",
 )
 
-# Script generated for node Join
-Join_node1693733484444 = Join.apply(
+# Script generated for node Join1
+Join1_node1693743003261 = Join.apply(
     frame1=StepTrainerLanding_node1,
-    frame2=RenamedkeysforJoin_node1693733605794,
-    keys1=["serialnumber"],
-    keys2=["cust_serialnumber"],
-    transformation_ctx="Join_node1693733484444",
+    frame2=AccelerometerTrusted_node1693742704153,
+    keys1=["sensorreadingtime"],
+    keys2=["timestamp"],
+    transformation_ctx="Join1_node1693743003261",
 )
 
-# Script generated for node Step Trainer Landing to Trusted
-StepTrainerLandingtoTrusted_node3 = glueContext.write_dynamic_frame.from_options(
-    frame=Join_node1693733484444,
+# Script generated for node Join2
+Join2_node1693743168866 = Join.apply(
+    frame1=Join1_node1693743003261,
+    frame2=RenamedkeysforJoin2_node1693743314449,
+    keys1=["user"],
+    keys2=["cust_email"],
+    transformation_ctx="Join2_node1693743168866",
+)
+
+# Script generated for node Step Trainer Trusted
+StepTrainerTrusted_node3 = glueContext.write_dynamic_frame.from_options(
+    frame=Join2_node1693743168866,
     connection_type="s3",
     format="json",
     connection_options={
         "path": "s3://akwa-bucket/step_trainer/trusted/",
         "partitionKeys": [],
     },
-    transformation_ctx="StepTrainerLandingtoTrusted_node3",
+    transformation_ctx="StepTrainerTrusted_node3",
 )
 
 job.commit()
