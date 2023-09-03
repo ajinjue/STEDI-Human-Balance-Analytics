@@ -39,5 +39,6 @@ To simulate the data coming from the various sources (data lake), I created an S
 
 ## Program Files
 **customer_landing.png:** It contains the result for querying the entire customer_landing table using AWS Athena Query Editor. Its content is showed below:
+
 ![image](https://github.com/ajinjue/STEDI-Human-Balance-Analytics/assets/100845693/09060de9-9200-4dbe-8f79-605d94cf71a3)
 
