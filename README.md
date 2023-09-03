@@ -38,4 +38,6 @@ The datasets have the following fields: <br/>
 To simulate the data coming from the various sources (data lake), I created an S3 bucket, 3 directories in the bucket, and copied the datasets in them. I AWS Glue's Data Catalog to create Glue tables as customer_landing, step_trainer_landing, and accelerometer_landing zones.
 
 ## Program Files
-**customer_landing.png:** It contains the result for querying the entire customer_landing table using AWS Athena Query Editor
+**customer_landing.png:** It contains the result for querying the entire customer_landing table using AWS Athena Query Editor. Its content is showed below:
+![image](https://github.com/ajinjue/STEDI-Human-Balance-Analytics/assets/100845693/09060de9-9200-4dbe-8f79-605d94cf71a3)
+
