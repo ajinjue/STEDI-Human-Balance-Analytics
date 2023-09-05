@@ -52,11 +52,16 @@ To simulate the data coming from the various sources (data lake), I created an S
 
 ![image](https://github.com/ajinjue/STEDI-Human-Balance-Analytics/assets/100845693/5275d54b-2db6-490e-8f0e-37b6f0ad61c0)
 
+The resulting customer trusted data has no rows where shareWithResearchAsOfDate is blank. This is shown below:
+
+![image](https://github.com/ajinjue/STEDI-Human-Balance-Analytics/assets/100845693/2b770532-29dd-496a-a10a-d8f90d58cd5e)
+
 **customer_landing.sql:** It's the equivalent SQL code to create the customer_landing table from within AWS Athena Query Editor. <br/>
 **accelerometer_landing.sql:** It's the equivalent SQL code to create the accelerometer_landing table from within AWS Athena Query Editor. <br/>
 **Accelerometer_Landing_to_Trusted.py:** It's the python script for the Glue job to sanitize the Accelerometer data in the Landing zone. That's this job stores only Accelerometer Readings from customers who agreed to share their data for research purposes in the Trusted zone. <br/>
 **Customer_Trusted_to_Curated.py:** It's the python script for the Glue job that takes Customer data from the Trusted zone to the Curated zone after joining it with the Accelerometer data. <br/>
-**Step_Trainer_Landing_to_Trusted.py:** It's the python script for the Glue job that reads the Step Trainer IoT data stream (S3) and populate a Trusted Zone Glue Table called **step_trainer_trusted** which contains the Step Trainer Records data for customers who have accelerometer data and have agreed to share their data for research (customers_curated).
+**Step_Trainer_Landing_to_Trusted.py:** It's the python script for the Glue job that reads the Step Trainer IoT data stream (S3) and populate a Trusted Zone Glue Table called **step_trainer_trusted** which contains the Step Trainer Records data for customers who have accelerometer data and have agreed to share their data for research (customers_curated). <br/>
+**Step_Trainer_Trusted_to_Curated.py:** It's the python script for the Glue job which aggregates the table that has each of the Step Trainer Readings, and the associated accelerometer reading data for the same timestamp, but only for customers who have agreed to share their data, and make a glue table called **machine_learning_curated**.
 
 
 
